@@ -1,12 +1,11 @@
 services:
 
-  redis:
+  donkey-redis-cache:
     image: redis
-    container_name: donkey-redis-cache
     expose:
       - 6379
 
-  donkey:
+  donkey-boilerplate:
     depends_on:
       - donkey-redis-cache
     environment:

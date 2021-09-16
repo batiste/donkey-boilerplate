@@ -10,13 +10,13 @@ export function getConfig(): Config {
       port: 8000,
       timeout: 3,
     },
-    // match HTTP header Host: localhost and the /admin/ uri
+    // match HTTP header Host: localhost:3000 and the /admin/ uri
     {
-      hosts: ["localhost"],
+      hosts: ["localhost:3000"],
       upstream: "example.com",
-      // at least one uris should match. The match is done with startsWith
       uris: ["/admin/"],
       requestMiddlewares: [createBasicAuthMiddleware("admin", "1234")],
+      stripUri: true,
     },
     // match any leftover requests
     {
