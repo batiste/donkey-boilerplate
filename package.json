@@ -1,0 +1,23 @@
+{
+  "name": "donkey-boilerplate",
+  "version": "1.0.0",
+  "description": "Donkey example project",
+  "main": "index.js",
+  "scripts": {
+    "format": "prettier --write \"*.ts\"",
+    "lint": "tslint -p tsconfig.json",
+    "build": "tsc",
+    "serve": "npm run build && UV_THREADPOOL_SIZE=8 node ./node_modules/donkey-gateway/build/donkey.js --run -c ./build/config.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "prettier": "~2.4.1",
+    "tslint": "~6.1.3",
+    "tslint-config-prettier": "~1.18.0"
+  },
+  "dependencies": {
+    "typescript": "~4.4.3",
+    "donkey-gateway": "~1.0.2"
+  }
+}

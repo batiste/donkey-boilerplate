@@ -1,0 +1,17 @@
+services:
+
+  redis:
+    image: redis
+    container_name: donkey-redis-cache
+    expose:
+      - 6379
+
+  donkey:
+    depends_on:
+      - donkey-redis-cache
+    environment:
+      REDIS_URL: redis://redis:6379
+      ENV: docker
+    build: .
+    ports:
+      - "3000:3000"
