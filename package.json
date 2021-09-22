@@ -7,7 +7,7 @@
     "format": "prettier --write \"*.ts\"",
     "lint": "tslint -p tsconfig.json",
     "build": "tsc",
-    "serve": "npm run build && UV_THREADPOOL_SIZE=8 node ./node_modules/donkey-gateway/build/donkey.js --run -c ./build/config"
+    "serve": "npm run build && node ./node_modules/donkey-gateway/build/donkey.js --run -c ./build/config"
   },
   "author": "",
   "license": "ISC",
