@@ -14,8 +14,7 @@ npm run serve
 Or
 
 ```
-docker compose build
-docker compose up
+docker compose build && docker compose up
 ```
 
 Then visit http://localhost:3000/ and http://localhost:3000/admin/

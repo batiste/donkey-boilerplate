@@ -4,12 +4,14 @@ services:
     image: redis
     expose:
       - 6379
+    ports:
+      - "6379:6379"
 
   donkey-boilerplate:
     depends_on:
       - donkey-redis-cache
     environment:
-      REDIS_URL: redis://redis:6379
+      REDIS_URL: redis://donkey-redis-cache:6379
       ENV: docker
     build: .
     ports:

@@ -1,6 +1,6 @@
 {
   "name": "donkey-boilerplate",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Donkey example project",
   "main": "index.js",
   "scripts": {
@@ -18,6 +18,6 @@
   },
   "dependencies": {
     "typescript": "~4.4.3",
-    "donkey-gateway": "~1.0.2"
+    "donkey-gateway": "~1.0.4"
   }
 }
