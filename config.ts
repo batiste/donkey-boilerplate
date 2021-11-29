@@ -40,7 +40,7 @@ export function getConfig(): Config {
       upstream: "example.com",
       uris: ["/admin/"],
       requestMiddlewares: [createBasicAuthMiddleware("admin", "1234"), rateLimitationMiddleware],
-      stripUri: true,
+      stripeUri: true,
     },
     // match any leftover requests
     {
